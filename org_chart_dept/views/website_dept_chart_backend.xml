@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<openerp>
+    <data>
+        <record id="action_chart_dept_menu" model="ir.actions.client">
+            <field name="name">Departments Hierarchy</field>
+            <field name="tag">depthierarchy</field>
+            <field name="target">new</field>
+        </record>
+        
+        <record id="action_chart_dept_rpt" model="ir.actions.act_url">
+            <field name="name">Departments Hierarchy</field>
+            <field name="url">/deptchart/web/</field>
+            <field name="target">new</field>
+        </record>
+       
+        <menuitem icon="STOCK_PRINT" name="Departments Hierarchy" action="action_chart_dept_rpt" id="menu_chart_department" parent="hr.menu_human_resources_configuration" sequence="2"/>
+    </data>
+</openerp>

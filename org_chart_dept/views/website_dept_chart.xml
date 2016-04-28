@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+<data>
+
+  <template id="assets_backend" inherit_id="website.assets_backend" name="Hierarchical Manner - Department">
+    <xpath expr="." position="inside">
+      <script type="text/javascript" src="/org_chart_dept/static/src/js/date_format.js"></script>
+      <script type="text/javascript" src="/org_chart_dept/static/src/js/website_department_chart.js"></script>
+      <script type="text/javascript" src="/org_chart_dept/static/lib/jSignature/jSignature.min.js"></script>
+      <link rel='stylesheet' href='/org_chart_dept/static/src/css/website_profitloss.css' />
+    </xpath>
+  </template>  
+
+  <template  id="chart_department" name="Profit and Loss Details">&lt;!DOCTYPE html&gt;
+      <html>
+      <head>
+      <title>Department Hierarchy - Odoo</title>
+      <link rel="shortcut icon" href="/org_chart_dept/static/src/img/favicon.ico" type="image/x-icon"/>
+        <t t-call-assets="web.assets_common" t-css="false"/>
+        <t t-call-assets="web.assets_backend" t-css="false" />
+        <link rel="stylesheet" href="/web/static/lib/bootstrap/css/bootstrap.css" />
+        <link rel='stylesheet' href='/org_chart_dept/static/src/css/website_profitloss.css'/>
+        <link rel="stylesheet" href="/org_chart_dept/static/src/css/pickdate_jquery-ui.css"/>
+	<script src="/org_chart_dept/static/src/js/pickdate_jquery-ui.js"></script>
+	<link rel="stylesheet" href="/org_chart_dept/static/src/css/style.css"/>
+	
+    <script src="/org_chart_dept/static/src/js/daterange/moment.min.js"></script>
+    <script src="/org_chart_dept/static/src/js/daterange/jquery.comiseo.daterangepicker.js"></script>
+        
+        <script type="text/javascript" id="loading-script" t-raw="init">
+            odoo.define('web.web_client', function (require) {
+                var WebClient = require('web.WebClient');
+                var web_client = new WebClient();
+
+                web_client._title_changed = function() {};
+                web_client.show_application = function() {
+                    web_client.action_manager.do_action("org_chart_dept.depthierarchy", {});
+                };
+
+                $(function () {
+                    web_client.setElement($(document.body));
+                    web_client.start();
+                });
+                return web_client;
+            });
+           
+        </script>
+      </head>  
+<body>
+        <div class='openerp openerp_webclient_container'>
+            <table class='oe_webclient'>
+                <tr>
+                    <td class='oe_application' />
+                </tr>
+            </table>
+        </div>
+    </body>      
+        </html>
+  </template>
+
+<template id="user_navbar" inherit_id="org_chart_dept.chart_department" groups="base.group_user">
+<xpath expr="//div['id=divtitle']" position="before">
+<div id="dvLoading" name="dvLoading"></div>
+<t t-if="website and menu_data">
+    <nav id="oe_main_menu_navbar" class="navbar1 navbar-inverse" role="navigation">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#oe_applications">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>    
+        </div>
+
+        <ul id="oe_applications" class="nav navbar-nav navbar-left navbar-collapse collapse">
+            <li class="dropdown active">
+                <a href="#" class="dropdown-toggle hidden-xs" data-toggle="dropdown"><i class="fa fa-th-large"></i> Website<b class="caret"/></a>
+                <ul class="dropdown-menu">
+                    <li t-foreach="menu_data['children']" t-as="menu">
+                        <t t-call="web.menu_link"/>
+                    </li>
+                </ul>
+            </li>
+        </ul>        
+	<div class="navbar-header navbar-form navbar-right">
+            <button type="button" class="btn btn-danger js_pick_quit pull-right">Quit</button> 
+        </div>
+        <div class="navbar-header navbar-form navbar-right">
+            
+        </div>
+    </nav>
+</t>
+
+</xpath>
+</template>
+
+
+
+</data>
+</openerp>

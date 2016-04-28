@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+    <t t-name='deptchartWidget'>
+        <div id="maindiv" name="maindiv" width="100%" align="center">
+           <table id="maintbl" name="maintbl" align="center">           
+        <tr>       
+        <td id="maintd" class="tree">  
+        </td>       
+        </tr>
+        </table>
+        
+        </div>
+    </t>  
+    
+</templates>
+  

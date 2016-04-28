@@ -1,0 +1,30 @@
+<html>
+<head>
+    <link rel="stylesheet" href="jquery-ui.min.css"  rel="stylesheet"/>
+    <link href="jquery.comiseo.daterangepicker.css" rel="stylesheet"/>
+    <script src="jquery.min.js"></script>    
+    <script src="jquery-ui.js"></script>
+    <script src="moment.min.js"></script>
+    <script src="jquery.comiseo.daterangepicker.js"></script>
+    <script>
+        $(function() { 
+        $("#e1").daterangepicker({
+     datepickerOptions : {
+         numberOfMonths : 2,
+         initialText : 'Select Date Range...',
+         rangeSplitter : '-',
+         dateFormat : 'M d, yy',
+     }
+ });
+ $("#btn1").click(function () { alert("Input value is: " + $("#e1").val());});
+ $("#btn2").click(function() { $("#e1").daterangepicker("clearRange"); });
+ });
+ 
+    </script>
+</head>
+<body>
+    <input id="e1" name="e1"/>
+    <button id="btn1" name="btn1">Get</button>
+    <button id="btn2" name="btn2">Clear</button>
+</body>
+</html>
