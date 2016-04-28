@@ -1,0 +1,91 @@
+body, a {
+    /*color: blue;*/
+    font-family: sans-serif;
+    font-size: 14px;
+    text-decoration: none;
+}
+#pgtitle
+{
+	margin: 0px 0px 20px;
+	font-size: 18pt;
+	text-align: center;
+}
+.tree 
+{
+width:70%;
+}
+.tree1 
+{
+width:80%;
+}
+.tree ul {
+    list-style: none outside none;
+}
+.tree li a {
+    line-height: 20px;
+}
+.tree > ul > li a {
+    color: #3B4C56;
+    display: block;
+    font-weight: normal;
+    position: relative;
+    text-decoration: none;
+    width:210px;
+}
+table{
+    width:100%;
+    border-collapse:separate !important;
+}
+.hidediv{
+ display:none;
+}
+ul{
+margin: 0px 0px 20px;
+}
+.relative{
+position: relative;
+text-decoration: none;
+}
+.tree li.parent > a {
+    padding: 0 0 0 23px;
+    
+}
+.tree li.parent > a:before {
+    /*background-image: url("../img/plus_minus_icons.png");
+    background-position: 16px center;*/
+     content: ""; 
+    display: block;
+    height: 16px;
+    left: 4px;
+    position: absolute;
+    top: 4px;
+    vertical-align: middle;
+    width: 16px;
+}
+.tree ul li.active > a:before {
+    background-position: 0 center;
+}
+.tree ul li ul {
+    border-left: 1px solid #666666;
+    display: none;
+    margin: 0 0 0 150px;
+    overflow: hidden;
+    padding: 0 0 0 25px;
+}
+.tree ul li ul li {
+    position: relative;
+}
+.tree ul li ul li:before {
+    border-bottom: 1px solid #666666;
+    content: "";
+    left: -30px;
+    position: absolute;
+    top: 50px;
+    width: 55px;
+}
+#wrapper {
+    margin: 0 auto;
+    width: 300px;
+}
+
+

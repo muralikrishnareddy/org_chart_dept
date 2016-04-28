@@ -1,0 +1,191 @@
+.o_website_quote .bs-sidebar {
+  position: fixed;
+  z-index : 1;
+  background-color: #f7f5fa;
+  border-radius: 5px;
+}
+#dvLoading
+	{
+	  background:url("../img/ajax-loader.gif") no-repeat center center;
+	   height: 110%;
+	   width: 110%;
+	   position: fixed;
+	   z-index: 1000;
+	   margin: -25px 0 0 -25px;
+           background-color:#666;
+           opacity:0.8;
+	}
+	
+.show_budget_actual{
+ display: none;/*none - to hide, inline - to show*/
+}	
+
+table, th, td {
+    border: 1px solid transparent;
+}
+tr {
+    page-break-inside: avoid !important;
+}
+.noborder table, th, td {
+    border: 0px solid transparent;
+}
+.nowrap {
+    white-space: nowrap;
+}
+#maintbl ul, ol {
+    margin-bottom: 0px !important;
+}
+.modal-body1 {
+    position: relative;
+    padding: 5px;
+}
+.navbar1 {
+    position: relative;
+    min-height: 53px;
+    margin-bottom: 0px;
+    border: 1px solid transparent;
+}
+.navbar2 {
+    position: relative;
+    min-height: 0px !important;
+    margin-bottom: 0px !important;
+    border: 1px solid transparent;
+}
+.button_highlight {
+    background-color: #C02C2C;
+    background-image: linear-gradient(to bottom, #DF3F3F, #A21A1A);
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.1), 0px 1px 1px rgba(155, 155, 155, 0.4) inset;
+    color: #FFF;
+    border: 1px solid rgba(0, 0, 0, 0.4);
+    
+    display: inline-block;
+border: 1px solid rgba(0, 0, 0, 0.4);
+margin: 0px;
+padding: 3px 12px;
+font-size: 13px;
+text-align: center;
+border-radius: 3px;
+text-shadow: 0px 1px 1px rgba(255, 255, 255, 0.5);
+outline: medium none;
+height:35px;
+}
+
+.wrapper-dropdown {
+		
+		-webkit-appearance: none;  /*Removes default chrome and safari style*/
+		-moz-appearance: none; /* Removes Default Firefox style*/
+		background: #E6E6E6 url("../img/down-arrow.png") no-repeat 96% center;	
+		text-indent: 0.01px; /* Removes default arrow from firefox*/
+		text-overflow: "";  /*Removes default arrow from firefox*/ /*My custom style for fonts*/
+		/*color: #292929;*/
+		border-radius: 4px;
+		padding: 5px;
+		background-color: #E6E6E6;
+		border: 1px solid #D3D3D3;
+	}
+td.tdclass {
+    padding: 7px;
+}
+.greyback{
+   background-color: #f7f5fa;
+}
+.o_website_quote .bs-sidenav {
+   padding-top: 10px;
+   padding-bottom: 10px;
+}
+.datatbl > tr > td:nth-child(even) {
+    background-color: #ffa;
+padding-right: 5px;
+}
+.o_website_quote .bs-sidebar .nav > li > a {
+   display: block;
+   color: #716b7a;
+   padding: 5px 20px;
+}
+.oe_loading_hide {
+   display: none;
+}
+.navbar-inverse .navbar-nav > li > a {
+    color: #CCCCCC;
+}
+/*a {
+    text-decoration: none !important;
+    color: #716b7a !important;
+}*/
+.navbar-center {
+text-align: center;
+}
+
+.o_website_quote .bs-sidebar .nav > .active > a,
+.o_website_quote .bs-sidebar .nav > .active:hover > a,
+.o_website_quote .bs-sidebar .nav > .active:focus > a {
+  font-weight: bold;
+  color: #563d7c;
+  background-color: transparent;
+  border-right: 1px solid #563d7c;
+}
+
+.o_website_quote .bs-sidebar .nav .nav {
+  display: none;
+  margin-bottom: 8px;
+}
+.o_website_quote .bs-sidebar .nav .nav > li > a {
+  padding-top: 3px;
+  padding-bottom: 3px;
+  padding-left: 30px;
+  font-size: 90%;
+}
+
+@media (min-width: 992px) {
+  .o_website_quote .bs-sidebar .nav > .active > ul {
+    display: block;
+  }
+  .o_website_quote .bs-sidebar {
+    width: 213px;
+  }
+}
+@media (min-width: 1200px) {
+  .o_website_quote .bs-sidebar {
+    width: 263px;
+  }
+}
+@media print {
+    body {
+        padding : 0 !important;
+    }
+}
+.openerp .oe_loading {
+  display: none;
+}
+.dept-div-class { 
+    display: block;
+    border:solid 1px gold;
+    background:#fff5cc;
+    border-radius: 7px;
+    width:300px;
+    color:black;
+    margin:30px 0 0;
+}
+.parent > a{
+	cursor:pointer;
+}
+.parent > a > table.datatbl > tbody > tr > td > div.dept-div-class{
+	background-color: #cccccc;
+}
+.dept-div-class table{
+    width:100%;
+    padding:3px;
+}
+.dept-div-class .dept{
+    background:#9933ff;
+    border-radius: 3px;
+    padding:3px;
+    text-align:center;
+    color:white;
+    font-weight: bold;
+}
+.datatbl
+{
+width:300px;
+}
+
